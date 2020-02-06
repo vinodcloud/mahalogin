@@ -1,0 +1,10 @@
+---
+- hosts:
+        testnet
+  become: yes
+  tasks:
+  - name: copying files from source to destination
+    copy:
+      src: /var/lib/jenkins/workspace/demo_git_maven/target/mahaLogin-1.0.war
+      dest: /opt/tomcat/webapps/
+      #remote_src: yes
