@@ -13,5 +13,10 @@ pipeline {
 
           }
       }
+        stage('deploying warfile using ansible') {
+            steps {
+                ansiblePlaybook installation: 'ansiblelocal', inventory: 'vinod_hosts', playbook: 'copy_remote.yml'
+            }
+        }
    }
 }
