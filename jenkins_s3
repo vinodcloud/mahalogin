@@ -9,8 +9,9 @@ pipeline {
        //* }
         stage('uploading object to s3 bucket') {
             steps {
-            sh label: '', script: ''' chmod 777 s3_upload.py
-                                       ./s3_upload.py'''
+            sh label: '', script: '''dos2unix s3_upload.py
+                                     chmod 777 s3_upload.py
+                                      ./s3_upload.py'''
             }
         }
    }
