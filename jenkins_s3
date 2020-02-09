@@ -9,8 +9,7 @@ pipeline {
        //* }
         stage('uploading object to s3 bucket') {
             steps {
-            sh label: '', script: '''chmod 777 fe9-sample.py \
-                ./fe9-sample.py'''
+            sh label: '', script: './fe9-sample.py'
             }
         }
    }
